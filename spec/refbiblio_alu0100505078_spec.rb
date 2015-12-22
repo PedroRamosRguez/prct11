@@ -122,5 +122,19 @@ describe Biblioteca do
 					tit :titulo => "Astronomia para novatos."
 				end
 			end
+				it "Expectativa mostrar de la nueva lista recibiendo referencias bibliograficas mediante módulos"do
+			
+				@list1.mostrar
+			
+			end
+			it "Expectativa para el uso del min" do
+				expect(@list1.min==@lib1).to eq(false)
+			end
+			it "Expectativa para el uso del max" do
+				expect(@list1.max==@libro2).to eq(false)
+			end
+			it "Expectativa para el uso del count" do
+				expect(@list1.count).to eq(3)
+			end
 		end
 		
