@@ -73,5 +73,54 @@ describe Biblioteca do
 				end 
 		    end
 		end 
-		
+		describe Lista do
+			before:each do 
+				
+				@lib1=Libro.new("ESTO ES UN LIBRO1")do 
+  					aut :nombre => "juanito"
+  					aut :apellido => "lopez"
+					tipodoc :nombre => "titulo del Libro1"
+  					tipodoc :volumen => 42
+  					tipodoc :edicion => 3
+  					tit :titulo => "Prueba de un titulo1..."
+				end
+				@lib2=Libro.new("ESTO ES UN LIBRO2")do 
+					 aut :nombre => "pedro"
+					 aut :apellido => "ramos"
+  					 tipodoc :nombre => "titulo del Libro2"
+  					 tipodoc :volumen => 2
+  					 tipodoc :edicion => 1
+  					 tit :titulo => "Prueba de un titulo2..."
+				end
+				@lib3=Libro.new("ESTO ES UN LIBRO3")do 
+  					aut :nombre => "laura"
+					aut :apellido => "jimenez"
+  					tipodoc :nombre => "titulo del Libro3"
+  					tipodoc :volumen => 4
+  					tipodoc :edicion => 8
+  					tit :titulo => "Prueba de un titulo3..."
+				end
+				@doc1=Doc_electronico.new("esto es un documento electronico")do 
+  					aut :nombre => "carl"
+					aut :apellido => "Sagan"
+  					tipodoc :nombre => "Cience"
+  					tipodoc :volumen => 12
+  					tipodoc :edicion => 10
+					tit :titulo => "Astronomia para novatos."
+				end
+				@list1=Lista.new()
+				@list1.inserta([@lib1,@lib2,@lib3,@doc1])
+				#@list1.mostrar	
+			end
+			it "Expectativa para comprobar el funcionamiento de los bloques"do
+				@doc1=Doc_electronico.new("esto es un documento electronico")do 
+  					aut :nombre => "carl"
+					aut :apellido => "Sagan"
+  					tipodoc :nombre => "Cience"
+  					tipodoc :volumen => 12
+  					tipodoc :edicion => 10
+					tit :titulo => "Astronomia para novatos."
+				end
+			end
+		end
 		
